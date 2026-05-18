@@ -20,6 +20,10 @@ npm run build
 
 ## GitHub上での確認
 
-1. `main` にpush
-2. Actionsタブでワークフロー実行結果を確認
-3. Pages設定でデプロイURLを確認
+1. 任意のブランチにpush（CIが実行される）
+2. `main` 向けのPull Requestを作成（CIが実行される）
+3. `main` にマージ（CDでPagesへデプロイされる）
+4. Actionsタブで `CI CD Sample` の結果を確認
+5. Repositoryの「Settings > Pages」で公開URLを確認
+
+手動確認したい場合は、Actionsタブから `workflow_dispatch` で実行できます。
